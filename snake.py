@@ -108,7 +108,12 @@ def game():
             target_y = round(random.randrange(0,h - s_size)/10.0)*10.
             snake_length += 1
         
-        clock.tick(s_sipeed)
+        if (snake_length) < 5:
+            snake_speed=15
+            clock.tick(snake_speed)
+        else:
+            snake_speed = 20
+            clock.tick(snake_speed)
     pygame.quit()
     quit()
 
